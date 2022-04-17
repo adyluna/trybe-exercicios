@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let corpo = document.querySelector('body')
+      let titulo = document.createElement('h1')
+      let conteudo = document.createElement('main')
+      let secao = document.createElement('section')
+      let secao1 = document.createElement('section')
+      let secao2 = document.createElement('section')
+      let parag = document.createElement('p')
+      let imagem = document.createElement('img')
+      let numeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 
+      'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+      let lista = document.createElement('ul')
+      let cabecalho = document.createElement('h3')
+      let cabecalho2 = document.createElement('h3')
+      let cabecalho3 = document.createElement('h3')
+
+
+      imagem.src = 'https://picsum.photos/200'
+      imagem.className = 'small-image'
+      parag.innerText = 'Algum texto'
+      conteudo.className = '.main-content'
+      secao.className = '.center-content'
+      secao1.className = '.left-content'
+      secao2.className = '.right-content'
+      titulo.innerText = 'Exercício 5.2 - JavaScript DOM'
+      corpo.appendChild(titulo)
+      corpo.appendChild(conteudo)
+      conteudo.appendChild(secao)
+      conteudo.appendChild(secao1)
+      conteudo.appendChild(secao2)
+      secao.appendChild(parag)
+      secao1.appendChild(imagem)
+      secao2.appendChild(lista)
+      conteudo.appendChild(cabecalho)
+      conteudo.appendChild(cabecalho2)
+      conteudo.appendChild(cabecalho3)
+
+      for (let i = 0; i < numeros.length; i++) {
+        let itemNumber = numeros[i];
+        let numberList = document.createElement('li');
+        numberList.innerText = itemNumber;
+
+        lista.appendChild(numberList)
+    }  
+
+
+    </script>
+  </body>
+</html>
