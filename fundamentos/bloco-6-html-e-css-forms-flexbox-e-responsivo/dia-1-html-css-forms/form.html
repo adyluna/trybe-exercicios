@@ -7,9 +7,9 @@
     <title>Formulário</title>
 </head>
 <body>
-    <h1>Por que você deve ser escolhida para ganhar uma viagem com tudo pago pela Trybe?</h1>
-    <form action="">
-        <label for="name">Nome Completo:</label>
+    <h1>Concurso TrybeTrip</h1>
+    <form action="" method="get" enctype="multipart/form-data">
+       <label for="full-name">Nome Completo:</label>
        <input type="text" minlength="10" maxlength="40" name="name" id="full-name">
        <br>
        <br>
@@ -26,11 +26,25 @@
        </select>
        <br>
        <br>
-       <label for="text-area">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
-       <textarea name="motivo" id="text-area" cols="50" rows="10"></textarea>
+       <p id="testando">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+       <textarea name="reason" id="text-area" cols="50" rows="10"></textarea>
        <br>
        <br>
-       <input type="date">
+       <label for="travel-date">Qual a melhor data para realizar sua viagem?</label>
+       <input type="date" id="travel-date" name="travelDate">
+       <br>
+       <br>
+       <label for="opportunities-check">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+       <input type="checkbox" id="opportunities-check" name="opportunities">
+       <br>
+       <br>
+       <label for="image-agree">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+       <input type="checkbox" id="image-agree" name="agree">
+       <br>
+       <br>
+       <button type="submit" id="submit-button" name="submit">Enviar</button>
+       <button type="reset" id="reset-button">Limpar</button>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
