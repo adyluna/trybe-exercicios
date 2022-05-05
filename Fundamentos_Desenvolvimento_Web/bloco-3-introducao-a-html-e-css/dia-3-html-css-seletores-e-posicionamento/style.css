@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+p, li {
+    color: #475550;
+    font-size: 16px;
+}
+p {
+    text-align: center;
+}
+.trybe-green {
+    color: #11a36a;
+}
+.trybe-greener {
+    color: #0a7e51;
+    font-size: 45px;
+    line-height: 55px;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+.section-title {
+    line-height: 42px;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+.testimonial-name {
+    line-height: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.picture {
+    border-radius: 50%;
+}
+.button {
+    color: white;
+    background-color: #11a36a;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 20px 0;
+    display: inline-block;
+}
+.button:hover {
+    background-color: #0a7e51;
+}
+#header {
+    background-image: url('https://assets.website-files.com/5d4c18a28620ae5d4f33af94/5d4c18a28620ae56f733b01a_hero-image.jpg');
+    height: 500px;
+    background-size: cover;
+    background-position: 50% 25%;
+    padding: 60px 30px 40px;
+}
+.header-content {
+    max-width: 660px;
+    margin-left: 75px;
+}
+.header-text {
+    max-width: 81%;
+}
+
+.header-text p {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+#market {
+    padding: 6em 30px;
+    text-align: center;
+}
+.market-text {
+    width: 80%;
+    font-size: 16px;
+    line-height: 24px;
+    margin: auto;
+}
+
+.market-text p {
+
+}
+
+.student-testimonial {
+    padding: 30px;
+}
+.student-container {
+    width: 30%;
+    display: inline-block;
+    margin: 10px;
+}
+.student-container p {
+    font-style: italic;
+    margin: 10px 0;
+}
+
+#learning {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.learning-left {
+    float: left;
+    width: 40%;
+    padding: 50px;
+}
+.learning-left li {
+    text-align: left;
+    margin-bottom: 10px;
+    list-style: square;
+}
+.learning-right {
+    float: right;
+    margin-bottom: 30px;
+    width: 50%
+}
+.learning-button {
+    clear: both;
+    margin-top: 30px;
+}
