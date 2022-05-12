@@ -47,9 +47,36 @@ const requeriedValue = (object, index) => Object.values(object)[index]
 const hasProp = (object, key, value) => object.hasOwnProperty(key) 
 && object[key] === value ? true : false
 
-const studentsPerLesson = (object, key, value) => object.hasOwnProperty(key) 
-&& object[key] === value ? true : false
+// Bonus1
+const studentsPerLesson = (object, key, value, key2) => {
+    let total = 0;
+    for (lessons in object) {
+        if (object[lessons][key] === value) {
+            total += object[lessons][key2];
+        }
+    } return total
+}
+
+// Bonus2
+const createReport = (object, professor, professorName, materia, number) => {
+    let total = 0;
+    const lessonsArr = [];
+    for (lessons in object) {
+        if (object[lessons][professor] === professorName) {
+            total += object[lessons][number];
+            lessonsArr.push(object[lessons][materia]);
+        }
+    } 
+    const report = {
+        'professor': professorName,
+        'aulas': lessonsArr,
+        'estudantes': total,
+    };
+    return report
+}
 
 console.log(studentsNumber(allLessons));
 console.log(requeriedValue(lesson1, 0));
 console.log(hasProp(lesson1, 'turno', 'manhã'));
+console.log(studentsPerLesson(allLessons, 'materia', 'Matemática', 'numeroEstudantes'));
+console.log(createReport(allLessons, 'professor', 'Maria Clara', 'materia', 'numeroEstudantes'));
