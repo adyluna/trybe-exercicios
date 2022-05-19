@@ -60,18 +60,8 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  const expectedResult = {
-    author: {
-      birthYear: 1948,
-      name: 'George R. R. Martin',
-    },
-    genre: 'Fantasia',
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    releaseYear: 1991,
-  };
-  
-  const getNamedBook = (arr) => arr.find((book) => book.name.length === 26);
 
-  console.log(getNamedBook(books));
+
+const booksOrderedByReleaseYearDesc = (arr) => arr.sort((a, b) => b.releaseYear - a.releaseYear);
+
+console.log(booksOrderedByReleaseYearDesc(books));
