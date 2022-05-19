@@ -28,23 +28,23 @@ const mage = {
 };
   
   const gameActions = {
-      warAct() {
-          const damageDone = warriorDamage();
+      warAct(callback) {
+          const damageDone = callback();
           warrior.damage = damageDone;
           dragon.healthPoints -= damageDone;
           return `O warrior causou ${damageDone} ao dragão!
           A besta ainda tem ${gameActions.dragonHealth} de vida.`;
       },
-      mageAct() {
-          const damageDone = mageDamage().Damage;
+      mageAct(callback) {
+          const damageDone = callback().Damage;
           mage.damage = damageDone;
           mage.mana -= 15;
           dragon.healthPoints -= damageDone;
           return `O mage causou ${damageDone} ao dragão!
           A besta ainda tem ${gameActions.dragonHealth} de vida.`
       },
-      dragonAct() {
-        const damageDone = dragonDamage();
+      dragonAct(callback) {
+        const damageDone = callback();
         dragon.damage = damageDone;
         warrior.healthPoints -= damageDone;
         mage.healthPoints -= damageDone;
@@ -53,9 +53,9 @@ const mage = {
         O mage tem ${mage.healthPoints}`
       },
       roundEnd() {
-          this.warAct(),
-          this.mageAct(),
-          this.dragonAct()
+          this.warAct(warriorDamage),
+          this.mageAct(mageDamage),
+          this.dragonAct(dragonDamage)
           return battleMembers;
       }
   };
