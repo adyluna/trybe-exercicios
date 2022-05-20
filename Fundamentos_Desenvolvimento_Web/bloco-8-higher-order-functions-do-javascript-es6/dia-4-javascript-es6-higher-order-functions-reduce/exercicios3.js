@@ -61,4 +61,8 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
+const avarageAge = (object) => object
+.map((elem) => elem.releaseYear - elem.author.birthYear)
+.reduce((a, b) => a + b) / object.length;
+
+console.log((avarageAge(books)));
