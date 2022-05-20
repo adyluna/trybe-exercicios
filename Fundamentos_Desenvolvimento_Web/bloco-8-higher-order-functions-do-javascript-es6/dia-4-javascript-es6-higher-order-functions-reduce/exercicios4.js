@@ -61,4 +61,7 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
+const longestName = (object) => object
+.reduce((a, b) => a.name.length > b.name.length ? a : b);
+
+console.log(longestName(books));
