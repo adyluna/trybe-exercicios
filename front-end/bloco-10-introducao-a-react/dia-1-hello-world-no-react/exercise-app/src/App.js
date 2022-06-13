@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import ToDoList from './ToDoList';
+import Content from './Content';
+import Header from './Header';
 
 const Task = (value) => {
   return (
@@ -13,9 +14,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {ToDoList.map((elem) => Task(elem))}
-        </p>
+        <Header />
+        <Content />
         <a
           className="App-link"
           href="https://reactjs.org"
