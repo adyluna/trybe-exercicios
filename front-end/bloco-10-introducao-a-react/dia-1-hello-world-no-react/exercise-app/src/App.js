@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Content from './Content';
 import Header from './Header';
+import Footer from './Footer.jsx';
 
 const Task = (value) => {
   return (
@@ -16,6 +17,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Header />
         <Content />
+        <Footer />
         <a
           className="App-link"
           href="https://reactjs.org"
