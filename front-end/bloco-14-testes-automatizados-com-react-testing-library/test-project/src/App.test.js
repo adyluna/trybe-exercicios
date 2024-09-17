@@ -50,6 +50,7 @@ describe('Testes gerais do component App', () => {
     history.push('pagina-nao-encontrada');
 
     const { pathname } = history.location;
+    console.log(pathname);
     expect(pathname).toBe('/pagina-nao-encontrada');
 
     const title =  screen.getByRole('heading', { name: /Página não encontrada/i, level: 1 });
